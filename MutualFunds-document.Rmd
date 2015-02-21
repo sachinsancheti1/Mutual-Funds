@@ -1,0 +1,38 @@
+---
+title: "Scaper"
+author: "Sachin Sancheti"
+date: "Thursday, February 19, 2015"
+output: html_document
+---
+
+This document is to explain some of the workings of the scaper designed. The data source of this scaper is from the <http://economictimes.indiatimes.com/mutual-funds>
+
+<http://rmarkdown.rstudio.com>.
+
+Regarding mutual fund data, some of the most useful data are usually the following for any investor:
+* Net Asset Values (NAV)
+* Website's rankings
+* Scheme Assets Under Management
+*	Fund Manager Name and Profile
+*	Fund House Assets Under Management	
+*	Monthly Portfolios
+*	Scheme Loads
+*	Portfolio Turnover
+*	Expense Ratio
+*	Portfolio Yields
+*	Benchmark Indices
+*	Average Maturity / Modified Duration
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
