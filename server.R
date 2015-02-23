@@ -1,6 +1,8 @@
 library(XML)
 library(dplyr)
 library(shiny)
+library(tidyr)
+library(stringr)
 parseIt <- function(x){
   htmlTreeParse(x, useInternalNodes = TRUE)
 }
@@ -108,7 +110,7 @@ convert.magic <- function(obj, type){
 }
 
 fundinfo <- function(x){
-  t = xpathApply(ps,'//div/div/span',fun = xmlChildren)
+  t = xpathApply(x,'//div/div/span',fun = xmlChildren)
   vars = c("Fund Family: ")
   jt = character()
   tr = character()
@@ -208,8 +210,11 @@ shinyServer(function(input, output) {
          sector = sectorinfo(ps),
          fundbasics = fundinfo(ps),
          manager = fundmgrinfo(ps),
-         risk = riskinfo(ps))
+         risk = riskinfo(ps),
+         url = url,
+         ps = ps)
   })
+  
   
   output$displayside <- renderUI(
     selectInput(inputId = 'fundselected',
@@ -223,7 +228,8 @@ shinyServer(function(input, output) {
       tabPanel("Sector",dataTableOutput(outputId = 'sector')),
       tabPanel("Basic Information",dataTableOutput(outputId =  'fundbasics')),
       tabPanel("Manager",dataTableOutput(outputId =  'manager')),
-      tabPanel("Risk",dataTableOutput(outputId =  'risk'))
+      tabPanel("Risk",dataTableOutput(outputId =  'risk')),
+      tabPanel("URL",textOutput('url'))
     )
   )
   
@@ -245,5 +251,7 @@ shinyServer(function(input, output) {
   output$risk <- renderDataTable({
     dataset()$risk %>% as.data.frame
   })
+  
+  output$url <- renderText(dataset()$url)
   
 })
