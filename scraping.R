@@ -3,9 +3,13 @@ library(XML)
 library(dplyr)
 library(tidyr)
 library(stringr)
+library(gdata)
 #
 #"http://economictimes.indiatimes.com/lt-equity-fund--direct-plan/mffactsheet/schemeid-16212.cms"
-allfunds = "http://economictimes.indiatimes.com/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year"
+#allfunds = "http://economictimes.indiatimes.com/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year"
+
+allfunds = read.xls("Types of funds.xlsx",header = T)
+testingt = paste("http://economictimes.indiatimes.com",allfunds$link,sep = "")
 
 url = "http://economictimes.indiatimes.com/uti-equity-fund/mffactsheet/schemeid-247.cms"
 
