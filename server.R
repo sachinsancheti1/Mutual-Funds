@@ -215,7 +215,6 @@ shinyServer(function(input, output) {
          ps = ps)
   })
   
-  
   output$displayside <- renderUI(
     selectInput(inputId = 'fundselected',
                 label = "Fund",
@@ -229,7 +228,8 @@ shinyServer(function(input, output) {
       tabPanel("Basic Information",dataTableOutput(outputId =  'fundbasics')),
       tabPanel("Manager",dataTableOutput(outputId =  'manager')),
       tabPanel("Risk",dataTableOutput(outputId =  'risk')),
-      tabPanel("URL",textOutput('url'))
+      tabPanel("URL",textOutput('url')),
+      tabPanel("Fund Returns",dataTableOutput('fundsreturns'))
     )
   )
   
@@ -241,6 +241,9 @@ shinyServer(function(input, output) {
     dataset()$sector %>% as.data.frame
   })
   
+  output$fundsreturns <- renderDataTable({
+    returnsinfo(dataset()$ps) %>% as.data.frame
+  })
   output$fundbasics <- renderDataTable({
     dataset()$fundbasics %>% as.data.frame
   })

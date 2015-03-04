@@ -1,0 +1,290 @@
+                                                                                                    hyperlink
+1                                                 /lt-equity-fund--direct-plan/mffactsheet/schemeid-16212.cms
+2                                                               /lt-equity-fund/mffactsheet/schemeid-2686.cms
+3                                                 /jm-equity-fund--direct-plan/mffactsheet/schemeid-16541.cms
+4                                                                /jm-equity-fund/mffactsheet/schemeid-108.cms
+5                                    /jp-morgan-india-equity-fund--direct-plan/mffactsheet/schemeid-16569.cms
+6                                     /baroda-pioneer-growth-fund--direct-plan/mffactsheet/schemeid-15707.cms
+7                                                       /kotak-50--direct-plan/mffactsheet/schemeid-16337.cms
+8                                           /uti-mastershare-fund--direct-plan/mffactsheet/schemeid-15789.cms
+9                                                  /jp-morgan-india-equity-fund/mffactsheet/schemeid-4871.cms
+10                                       /lt-india-large-cap-fund--direct-plan/mffactsheet/schemeid-16256.cms
+11                                                          /uti-mastershare-fund/mffactsheet/schemeid-22.cms
+12                                                  /baroda-pioneer-growth-fund/mffactsheet/schemeid-1820.cms
+13                                         /dws-alpha-equity-fund--direct-plan/mffactsheet/schemeid-15574.cms
+14                                                                     /kotak-50/mffactsheet/schemeid-577.cms
+15                                             /hdfc-top-200-fund--direct-plan/mffactsheet/schemeid-16164.cms
+16                                               /uti-equity-fund--direct-plan/mffactsheet/schemeid-15714.cms
+17                                                     /lt-india-large-cap-fund/mffactsheet/schemeid-5707.cms
+18                                                              /uti-equity-fund/mffactsheet/schemeid-247.cms
+19                                /idbi-india-top-100-equity-fund--direct-plan/mffactsheet/schemeid-16499.cms
+20                        /religare-invesco-business-leaders-fund--direct-plan/mffactsheet/schemeid-16712.cms
+21                                                            /hdfc-top-200-fund/mffactsheet/schemeid-104.cms
+22                                                       /dws-alpha-equity-fund/mffactsheet/schemeid-1513.cms
+23                                         /dws-alpha-equity-fund--wealth-plan/mffactsheet/schemeid-10438.cms
+24                                             /idbi-india-top-100-equity-fund/mffactsheet/schemeid-14722.cms
+25                                        /sbi-magnum-equity-fund--direct-plan/mffactsheet/schemeid-16219.cms
+26                                     /lic-nomura-mf-equity-fund--direct-plan/mffactsheet/schemeid-16756.cms
+27   /birla-sun-life-rajiv-gandhi-equity-savings-scheme--series-1--direct-plan/mffactsheet/schemeid-18220.cms
+28                                                       /sbi-magnum-equity-fund/mffactsheet/schemeid-190.cms
+29  /birla-sun-life-rajiv-gandhi-equity-savings-scheme--series-1--regular-plan/mffactsheet/schemeid-18218.cms
+30                                     /religare-invesco-business-leaders-fund/mffactsheet/schemeid-10565.cms
+31                                              /uti-top-100-fund--direct-plan/mffactsheet/schemeid-15845.cms
+32     /lic-nomura-mf-rajiv-gandhi-equity-saving-scheme--series-1--direct-plan/mffactsheet/schemeid-18115.cms
+33                                                    /lic-nomura-mf-equity-fund/mffactsheet/schemeid-134.cms
+34                                                             /uti-top-100-fund/mffactsheet/schemeid-258.cms
+35    /lic-nomura-mf-rajiv-gandhi-equity-saving-scheme--series-1--regular-plan/mffactsheet/schemeid-18113.cms
+36                                      /principal-large-cap-fund--direct-plan/mffactsheet/schemeid-16614.cms
+37     /idbi-rajiv-gandhi-equity-savings-scheme--series-1--plan-a--direct-plan/mffactsheet/schemeid-18009.cms
+38                                              /axis-equity-fund--direct-plan/mffactsheet/schemeid-15682.cms
+39         /icici-prudential-focused-bluechip-equity-fund--institutional-i-plan/mffactsheet/schemeid-7519.cms
+40                       /dsp-blackrock-top-100-equity-fund--institutional-plan/mffactsheet/schemeid-5219.cms
+41                             /dsp-blackrock-top-100-equity-fund--direct-plan/mffactsheet/schemeid-16456.cms
+42                 /icici-prudential-focused-bluechip-equity-fund--direct-plan/mffactsheet/schemeid-15841.cms
+43                                        /uti-opportunities-fund--direct-plan/mffactsheet/schemeid-15927.cms
+44                                           /boi-axa-equity-fund--direct-plan/mffactsheet/schemeid-16267.cms
+45                                                    /principal-large-cap-fund/mffactsheet/schemeid-2916.cms
+46    /idbi-rajiv-gandhi-equity-savings-scheme--series-1--plan-a--regular-plan/mffactsheet/schemeid-18007.cms
+47                             /dsp-blackrock-top-100-equity-fund--regular-plan/mffactsheet/schemeid-1540.cms
+48                                               /boi-axa-equity-fund--eco-plan/mffactsheet/schemeid-8989.cms
+49                 /icici-prudential-focused-bluechip-equity-fund--regular-plan/mffactsheet/schemeid-7517.cms
+50                                                      /uti-opportunities-fund/mffactsheet/schemeid-2820.cms
+51                                     /lic-nomura-mf-growth-fund--direct-plan/mffactsheet/schemeid-16781.cms
+52                          /icici-prudential-target-returns-fund--direct-plan/mffactsheet/schemeid-17412.cms
+53                                           /boi-axa-equity-fund--regular-plan/mffactsheet/schemeid-8985.cms
+54                                                           /axis-equity-fund/mffactsheet/schemeid-10780.cms
+55                                  /franklin-india-bluechip-fund--direct-plan/mffactsheet/schemeid-15982.cms
+56                                                    /lic-nomura-mf-growth-fund/mffactsheet/schemeid-158.cms
+57                                 /icici-prudential-top-100-fund--direct-plan/mffactsheet/schemeid-15868.cms
+58                                    /uti-leadership-equity-fund--direct-plan/mffactsheet/schemeid-15907.cms
+59                         /icici-prudential-target-returns-fund--regular-plan/mffactsheet/schemeid-10399.cms
+60                                                 /franklin-india-bluechip-fund/mffactsheet/schemeid-114.cms
+61                                         /tata-pure-equity-fund--direct-plan/mffactsheet/schemeid-16729.cms
+62                                  /canara-robeco-large-cap-fund--direct-plan/mffactsheet/schemeid-15765.cms
+63                                                  /uti-leadership-equity-fund/mffactsheet/schemeid-3099.cms
+64                                  /icici-prudential-top-100-fund--regular-plan/mffactsheet/schemeid-534.cms
+65    /dsp-blackrock-rajiv-gandhi-equity-savings-scheme--series-1--direct-plan/mffactsheet/schemeid-18013.cms
+66             /hdfc-rajiv-gandhi-equity-savings-scheme--series-1--direct-plan/mffactsheet/schemeid-18228.cms
+67                            /edelweiss-value-opportunities-fund--direct-plan/mffactsheet/schemeid-17354.cms
+68                                 /canara-robeco-large-cap-fund--regular-plan/mffactsheet/schemeid-11333.cms
+69                                                /tata-pure-equity-fund--plan-a/mffactsheet/schemeid-509.cms
+70                                         /edelweiss-value-opportunities-fund/mffactsheet/schemeid-10609.cms
+71   /dsp-blackrock-rajiv-gandhi-equity-savings-scheme--series-1--regular-plan/mffactsheet/schemeid-18011.cms
+72                                 /edelweiss-value-opportunities-fund--plan-b/mffactsheet/schemeid-10478.cms
+73            /hdfc-rajiv-gandhi-equity-savings-scheme--series-1--regular-plan/mffactsheet/schemeid-18226.cms
+74                             /hdfc-index-fund--sensex-plus-plan--direct-plan/mffactsheet/schemeid-16073.cms
+75                                           /hdfc-index-fund--sensex-plus-plan/mffactsheet/schemeid-1372.cms
+76                                              /hsbc-equity-fund--direct-plan/mffactsheet/schemeid-16289.cms
+77                                    /sundaram-select-focus-fund--direct-plan/mffactsheet/schemeid-16120.cms
+78                                          /icici-prudential-cnx-100-etf-fund/mffactsheet/schemeid-20933.cms
+79                                     /motilal-oswal-most-shares-m50-etf-fund/mffactsheet/schemeid-11348.cms
+80                              /sundaram-select-focus-fund--institutional-plan/mffactsheet/schemeid-7685.cms
+81                                                            /hsbc-equity-fund/mffactsheet/schemeid-1481.cms
+82                                    /sundaram-select-focus-fund--regular-plan/mffactsheet/schemeid-1384.cms
+83                                      /reliance-quant-plus-fund--direct-plan/mffactsheet/schemeid-16155.cms
+84                                                        /iifl-nifty-etf-fund/mffactsheet/schemeid-13382.cms
+85                                                          /quantum-index-fund/mffactsheet/schemeid-7834.cms
+86                                               /idfc-nifty-fund--direct-plan/mffactsheet/schemeid-16504.cms
+87                               /reliance-index-fund--nifty-plan--direct-plan/mffactsheet/schemeid-16856.cms
+88                                              /idfc-nifty-fund--regular-plan/mffactsheet/schemeid-11154.cms
+89                                            /icici-prudential-nifty-etf-fund/mffactsheet/schemeid-18653.cms
+90                                   /hdfc-index-fund--nifty-plan--direct-plan/mffactsheet/schemeid-16069.cms
+91                                          /uti-nifty-index-fund--direct-plan/mffactsheet/schemeid-15830.cms
+92                                              /birla-sun-life-nifty-etf-fund/mffactsheet/schemeid-13012.cms
+93                                                 /hdfc-index-fund--nifty-plan/mffactsheet/schemeid-1368.cms
+94                                            /reliance-index-fund--nifty-plan/mffactsheet/schemeid-11536.cms
+95                                   /principal-index-fund--nifty--direct-plan/mffactsheet/schemeid-16608.cms
+96                                       /taurus-nifty-index-fund--direct-plan/mffactsheet/schemeid-17039.cms
+97                                                         /uti-nifty-index-fund/mffactsheet/schemeid-757.cms
+98                     /franklin-india-index-fund--nse-nifty-plan--direct-plan/mffactsheet/schemeid-15996.cms
+99                                /lic-nomura-mf-index-nifty-plan--direct-plan/mffactsheet/schemeid-16763.cms
+100                    /lic-nomura-mf-index-sensex-advantage-plan--direct-plan/mffactsheet/schemeid-16742.cms
+101                        /uti-rajiv-gandhi-equity-saving-scheme--direct-plan/mffactsheet/schemeid-18133.cms
+102                                    /idfc-imperial-equity-fund--direct-plan/mffactsheet/schemeid-16507.cms
+103                                   /franklin-india-index-fund--nse-nifty-plan/mffactsheet/schemeid-834.cms
+104                                     /indiabulls-bluechip-fund--direct-plan/mffactsheet/schemeid-15579.cms
+105                                        /idbi-nifty-index-fund--direct-plan/mffactsheet/schemeid-16523.cms
+106                                                 /principal-index-fund--nifty/mffactsheet/schemeid-637.cms
+107                        /uti-rajiv-gandhi-equity-saving-scheme--retail-plan/mffactsheet/schemeid-18131.cms
+108                                                   /taurus-nifty-index-fund/mffactsheet/schemeid-11215.cms
+109                                             /lic-nomura-mf-index-nifty-plan/mffactsheet/schemeid-1478.cms
+110                                  /lic-nomura-mf-index-sensex-advantage-plan/mffactsheet/schemeid-1480.cms
+111                                         /peerless-equity-fund--direct-plan/mffactsheet/schemeid-16461.cms
+112                                         /sbi-nifty-index-fund--direct-plan/mffactsheet/schemeid-16233.cms
+113                                                     /idbi-nifty-index-fund/mffactsheet/schemeid-11188.cms
+114                                                  /birla-sun-life-index-fund/mffactsheet/schemeid-1445.cms
+115                                      /reliance-quant-plus-fund--retail-plan/mffactsheet/schemeid-2634.cms
+116                                    /idfc-imperial-equity-fund--regular-plan/mffactsheet/schemeid-3151.cms
+117                                    /birla-sun-life-index-fund--direct-plan/mffactsheet/schemeid-15769.cms
+118                                                       /sbi-nifty-index-fund/mffactsheet/schemeid-1164.cms
+119                                                  /indiabulls-bluechip-fund/mffactsheet/schemeid-14013.cms
+120                                                /icici-prudential-spice-fund/mffactsheet/schemeid-1512.cms
+121                                             /idfc-equity-fund--direct-plan/mffactsheet/schemeid-16699.cms
+122                                 /hdfc-index-fund--sensex-plan--direct-plan/mffactsheet/schemeid-16071.cms
+123                                             /tata-index-sensex-fund--plan-b/mffactsheet/schemeid-1553.cms
+124                                               /hdfc-index-fund--sensex-plan/mffactsheet/schemeid-1370.cms
+125                                             /idfc-equity-fund--regular-plan/mffactsheet/schemeid-3400.cms
+126                                                          /idfc-equity-fund/mffactsheet/schemeid-10552.cms
+127                              /lic-nomura-mf-index-sensex-plan--direct-plan/mffactsheet/schemeid-16798.cms
+128                                                      /peerless-equity-fund/mffactsheet/schemeid-13264.cms
+129                              /pramerica-large-cap-equity-fund--direct-plan/mffactsheet/schemeid-16639.cms
+130                                            /lic-nomura-mf-index-sensex-plan/mffactsheet/schemeid-1479.cms
+131                                           /pramerica-large-cap-equity-fund/mffactsheet/schemeid-11797.cms
+132                             /reliance-index-fund--sensex-plan--direct-plan/mffactsheet/schemeid-16859.cms
+133                                          /reliance-index-fund--sensex-plan/mffactsheet/schemeid-11541.cms
+134                                            /hsbc-dynamic-fund--direct-plan/mffactsheet/schemeid-17388.cms
+135                                          /hdfc-large-cap-fund--direct-plan/mffactsheet/schemeid-16626.cms
+136                                           /hdfc-large-cap-fund--regular-plan/mffactsheet/schemeid-172.cms
+137                                         /sahara-super-20-fund--direct-plan/mffactsheet/schemeid-15657.cms
+138                                                          /hsbc-dynamic-fund/mffactsheet/schemeid-5562.cms
+139                                                      /sahara-super-20-fund/mffactsheet/schemeid-10538.cms
+140                                 /goldman-sachs-cnx-nifty-shariah-bees-fund/mffactsheet/schemeid-10218.cms
+141        /icici-prudential-advisor-series--very-aggressive-plan--regular-plan/mffactsheet/schemeid-1936.cms
+142                                  /religare-invesco-agile-fund--direct-plan/mffactsheet/schemeid-16360.cms
+143                                                /religare-invesco-agile-fund/mffactsheet/schemeid-6115.cms
+144                                                                         /personal-finance/etf/etfhome.cms
+                                                                     fundname
+1                                               L&T Equity Fund Direct-Growth
+2                                                      L&T Equity Fund-Growth
+3                                                JM Equity Direct Plan-Growth
+4                                                       JM Equity-Growth Plan
+5                                   JP Morgan India Equity Direct Plan-Growth
+6                                         Baroda Pioneer Growth Direct-Growth
+7                                          Kotak 50 Unit Scheme Direct-Growth
+8                                               UTI Mastershare Direct-Growth
+9                                          JP Morgan India Equity Fund-Growth
+10                                     L&T India Large Cap Fund Direct-Growth
+11                                                     UTI Mastershare-Growth
+12                                          Baroda Pioneer Growth Fund-Growth
+13                                        DWS Alpha Equity Direct Plan-Growth
+14                                                Kotak 50 Unit Scheme-Growth
+15                                            HDFC Top 200 Direct Plan-Growth
+16                                              UTI Equity Fund Direct-Growth
+17                                            L&T India Large Cap Fund-Growth
+18                                                     UTI Equity Fund-Growth
+19                               IDBI India Top 100 Equity Fund Direct-Growth
+20                       Religare Invesco Business Leaders Fund Direct-Growth
+21                                                   HDFC Top 200 Fund-Growth
+22                                               DWS Alpha Equity Fund-Growth
+23                                   DWS Alpha Equity Fund Wealth Plan-Growth
+24                                      IDBI India Top 100 Equity Fund-Growth
+25                                       SBI Magnum Equity Direct Plan-Growth
+26                                    LIC Nomura MF Equity Fund Direct-Growth
+27   Birla Sun Life Rajiv Gandhi Equity Savings Scheme Series 1 Direct-Growth
+28                                                   SBI Magnum Equity-Growth
+29  Birla Sun Life Rajiv Gandhi Equity Savings Scheme Series 1 Regular-Growth
+30                              Religare Invesco Business Leaders Fund-Growth
+31                                                  UTI Top 100 Direct-Growth
+32     LIC Nomura MF Rajiv Gandhi Equity Saving Scheme Series 1 Direct-Growth
+33                                           LIC Nomura MF Equity Fund-Growth
+34                                                         UTI Top 100-Growth
+35    LIC Nomura MF Rajiv Gandhi Equity Saving Scheme Series 1 Regular-Growth
+36                                          Principal Large Cap Direct-Growth
+37      IDBI Rajiv Gandhi Equity Savings Scheme Series 1 Plan A Direct-Growth
+38                                             Axis Equity Direct Plan-Growth
+39       ICICI Prudential Focused Bluechip Equity Fund Institutional I-Growth
+40                     DSP BlackRock Top 100 Equity Fund Institutional-Growth
+41                    DSP BlackRock Top 100 Equity Regular Direct Plan-Growth
+42                     ICICI Prudential Focused Bluechip Equity Direct-Growth
+43                                       UTI Opportunities Fund Direct-Growth
+44                                  BOI AXA Equity Fund Regular Direct-Growth
+45                                                 Principal Large Cap-Growth
+46     IDBI Rajiv Gandhi Equity Savings Scheme Series 1 Plan A Regular-Growth
+47                           DSP BlackRock Top 100 Equity Regular Fund-Growth
+48                                             BOI AXA Equity Fund Eco-Growth
+49               ICICI Prudential Focused Bluechip Equity Fund Regular-Growth
+50                                              UTI Opportunities Fund-Growth
+51                                    LIC Nomura MF Growth Fund Direct-Growth
+52                        ICICI Prudential Target Returns Fund Direct -Growth
+53                                         BOI AXA Equity Fund Regular-Growth
+54                                                    Axis Equity Fund-Growth
+55                                 Franklin India Bluechip Direct Fund-Growth
+56                                           LIC Nomura MF Growth Fund-Growth
+57                                ICICI Prudential Top 100 Direct Plan-Growth
+58                                   UTI Leadership Equity Fund Direct-Growth
+59                        ICICI Prudential Target Returns Fund Regular-Growth
+60                                        Franklin India Bluechip Fund-Growth
+61                                        Tata Pure Equity Direct Plan-Growth
+62                                Canara Robeco Large Cap+ Fund Direct-Growth
+63                                          UTI Leadership Equity Fund-Growth
+64                               ICICI Prudential Top 100 Plan Regular-Growth
+65    DSP BlackRock Rajiv Gandhi Equity Savings Scheme Series 1 Direct-Growth
+66             HDFC Rajiv Gandhi Equity Savings Scheme Series 1 Direct-Growth
+67                         Edelweiss Value Opportunities Fund Direct - Growth
+68                               Canara Robeco Large Cap+ Fund Regular-Growth
+69                                        Tata Pure Equity Fund Plan A-Growth
+70                                Edelweiss Value Opportunities Fund - Growth
+71   DSP BlackRock Rajiv Gandhi Equity Savings Scheme Series 1 Regular-Growth
+72                          Edelweiss Value Opportunities Fund Plan B- Growth
+73            HDFC Rajiv Gandhi Equity Savings Scheme Series 1 Regular-Growth
+74                                  HDFC Index Sensex Plus Direct Plan-Growth
+75                                         HDFC Index Sensex Plus Fund-Growth
+76                                             HSBC Equity Fund Direct-Growth
+77                           Sundaram Select Focus Fund Regular Direct-Growth
+78                                        ICICI Prudential CNX 100 ETF-Growth
+79                  Motilal Oswal MOSt Shares M50 Exchange Traded Fund-Growth
+80                            Sundaram Select Focus Fund Institutional-Growth
+81                                                    HSBC Equity Fund-Growth
+82                                  Sundaram Select Focus Fund Regular-Growth
+83                              Reliance Quant Plus Fund Retail Direct-Growth
+84                                                      IIFL Nifty ETF-Growth
+85                                                  Quantum Index Fund-Growth
+86                                              IDFC Nifty Direct Plan-Growth
+87                              Reliance Index Fund Nifty Plan Direct -Growth
+88                                             IDFC Nifty Fund Regular-Growth
+89                                          ICICI Prudential Nifty ETF-Growth
+90                                       HDFC Index Nifty Direct Plan -Growth
+91                                         UTI Nifty Index Fund Direct-Growth
+92                                            Birla Sun Life Nifty ETF-Growth
+93                                              HDFC Index Nifty Fund -Growth
+94                                     Reliance Index Fund Nifty Plan -Growth
+95                                   Principal Index Fund Nifty Direct-Growth
+96                                      Taurus Nifty Index Fund Direct-Growth
+97                                                UTI Nifty Index Fund-Growth
+98                          Franklin India Index Fund NSE Nifty Direct-Growth
+99                               LIC Nomura MF Index Nifty Fund Direct-Growth
+100                   LIC Nomura MF Index Sensex Advantage Fund Direct-Growth
+101                       UTI Rajiv Gandhi Equity Saving Scheme Direct-Growth
+102                                   IDFC Imperial Equity Fund Direct-Growth
+103                                Franklin India Index Fund NSE Nifty-Growth
+104                                    Indiabulls Bluechip Direct Fund-Growth
+105                                       IDBI Nifty Index Fund Direct-Growth
+106                                         Principal Index Fund Nifty-Growth
+107                       UTI Rajiv Gandhi Equity Saving Scheme Retail-Growth
+108                                            Taurus Nifty Index Fund-Growth
+109                                     LIC Nomura MF Index Nifty Fund-Growth
+110                          LIC Nomura MF Index Sensex Advantage Fund-Growth
+111                                        Peerless Equity Fund Direct-Growth
+112                                        SBI Nifty Index Direct Plan-Growth
+113                                              IDBI Nifty Index Fund-Growth
+114                                          Birla Sun Life Index Fund-Growth
+115                                    Reliance Quant Plus Fund Retail-Growth
+116                                  IDFC Imperial Equity Fund Regular-Growth
+117                                   Birla Sun Life Index Fund Direct-Growth
+118                                               SBI Nifty Index Fund-Growth
+119                                           Indiabulls Bluechip Fund-Growth
+120                              ICICI Prudential Sensex Exchange Traded Fund
+121                                            IDFC Equity Fund Direct-Growth
+122                                      HDFC Index Sensex Direct Plan-Growth
+123                                                Tata Index Sensex Option B
+124                                             HDFC Index Sensex Fund-Growth
+125                                           IDFC Equity Fund Regular-Growth
+126                                            IDFC Equity Fund Plan B-Growth
+127                            LIC Nomura MF Index Sensex Fund Direct -Growth
+128                                               Peerless Equity Fund-Growth
+129                             Pramerica Large Cap Equity Direct Plan-Growth
+130                                    LIC Nomura MF Index Sensex Fund-Growth
+131                                    Pramerica Large Cap Equity Fund-Growth
+132                             Reliance Index Fund Sensex Plan Direct-Growth
+133                                    Reliance Index Fund Sensex Plan-Growth
+134                                          HSBC Dynamic Fund Direct -Growth
+135                                        HDFC Large Cap Fund Direct- Growth
+136                                       HDFC Large Cap Fund Regular- Growth
+137                                        Sahara Super 20 Direct Fund-Growth
+138                                                 HSBC Dynamic Fund -Growth
+139                                               Sahara Super 20 Fund-Growth
+140                                      Goldman Sachs CNX Nifty Shariah BeES
+141            ICICI Prudential Advisor-Very Aggressive Plan Regular - Growth
+142 Religare Invesco Alpha Generated From Industry Leaders Fund Direct-Growth
+143        Religare Invesco Alpha Generated From Industry Leaders Fund-Growth
+144                                                                       ETF

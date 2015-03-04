@@ -8,9 +8,58 @@ library(gdata)
 #"http://economictimes.indiatimes.com/lt-equity-fund--direct-plan/mffactsheet/schemeid-16212.cms"
 #allfunds = "http://economictimes.indiatimes.com/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year"
 
-allfunds = read.xls("Types of funds.xlsx",header = T)
-testingt = paste("http://economictimes.indiatimes.com",allfunds$link,sep = "")
+allfunds = tbl_df(read.xls("Types of funds.xlsx",header = T))
+allfunds$newlink = paste("http://economictimes.indiatimes.com",allfunds$link,sep = "")
+lint <- data.frame(hyperlink = character(),
+                   fundname = character())
 
+#linset <- hyperlinkoffunds(allfunds$newlink[1])
+# This could take upto 10 mins
+system.time({
+  for(i in 1:27){
+    linset <- tryCatch(allfunds$newlink[i] %>% 
+                         hyperlinkoffunds,
+                       error = function(e) list(hyperlink = paste("err",i),
+                                                fundname = paste("err",i))
+    )
+    cat("Done with",i,"\n")
+    lint <- rbind(lint,
+                  data.frame(hyperlink = as.vector(linset$hyperlink),
+                             fundname = as.vector(linset$fundname))
+    )
+  }
+})
+
+unilint <- convert.magic(unilint,"character")
+unilint$newlink = paste("http://economictimes.indiatimes.com",unilint$hyperlink,sep = "")
+
+alldata <- list()
+
+#this could take upto 4 sec per page
+system.time({
+  for(i in 1:1000){
+    fname <- as.character(unilint$fundname[i])
+    cat("Working on:",as.character(fname),"\n")
+    lnk <- as.character(unilint$newlink[i])
+    ps <- tryCatch(parseIt(lnk),
+                   error = function(e) NULL)
+    alldetails <- tryCatch(
+      list(smry = summarydata(ps),
+           sector = sectorinfo(ps),
+           fundbasics = fundinfo(ps),
+           manager = fundmgrinfo(ps),
+           #risk = try(riskinfo(ps)),
+           url = lnk,
+           fundname = fname,
+           i = i,
+           problems = is.null(ps)),
+      error = function(e) cat("Error in",i,"\n"))
+    cat("Done with:",i,"\n\n")
+    alldata <- c(alldata,fund = list(alldetails))
+  }
+})
+
+save(alldata,file = "first1000.RData")
 url = "http://economictimes.indiatimes.com/uti-equity-fund/mffactsheet/schemeid-247.cms"
 
 ps = parseIt(url)
@@ -28,6 +77,7 @@ parseIt <- function(x){
 # Function to get all the hyperlinks in the list of funds page for further data parsing
 hyperlinkoffunds <- function(x = "http://economictimes.indiatimes.com/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year"){
   ts = parseIt(x)
+  cat("working on",x,"\n\n")
   tt = xpathApply(ts,'//div/div/div/div/div/div/div',fun = xmlChildren)
   value = matrix(NA,ncol = 2,nrow = 0)
   colnames(value) = c("hyperlink","fundname")

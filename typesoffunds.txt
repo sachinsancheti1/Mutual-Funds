@@ -1,0 +1,238 @@
+[[1]]
+                                                                                                         style 
+                                                                                               "color:#FF6060" 
+                                                                                                          href 
+                                                                                           "javascript:void()" 
+                                                                                                       onclick 
+"window.open('/mutuafund_newsletter.cms?pop=5','MsgWindow','width=600,height=670,scrollbars=1');return false;" 
+
+[[2]]
+                                                                                              pg 
+                                                                                    "artShwImg1" 
+                                                                                            href 
+"/mf/analysis/how-investors-can-get-more-from-direct-mutual-fund-plans/articleshow/46001371.cms" 
+
+[[3]]
+                                                                                                                              class 
+                                                                                                             "twitter-share-button" 
+                                                                                                                               href 
+                                                                                                        "https://twitter.com/share" 
+                                                                                                                          data-text 
+                                                                         "How investors can get more from direct mutual fund plans" 
+                                                                                                                           data-url 
+"http://economictimes.indiatimes.com/mf/analysis/how-investors-can-get-more-from-direct-mutual-fund-plans/articleshow/46001371.cms" 
+
+[[4]]
+                                                                                                   pg 
+                                                                                         "artShwImg2" 
+                                                                                                 href 
+"/mf/analysis/why-you-need-to-be-careful-before-investing-in-sectoral-funds/articleshow/45921130.cms" 
+
+[[5]]
+                                                                                                                                   class 
+                                                                                                                  "twitter-share-button" 
+                                                                                                                                    href 
+                                                                                                             "https://twitter.com/share" 
+                                                                                                                               data-text 
+                                                                         "Why you need to be careful before investing in sectoral funds" 
+                                                                                                                                data-url 
+"http://economictimes.indiatimes.com/mf/analysis/why-you-need-to-be-careful-before-investing-in-sectoral-funds/articleshow/45921130.cms" 
+
+[[6]]
+                                                                                                        pg 
+                                                                                              "artShwImg3" 
+                                                                                                      href 
+"http://blogs.economictimes.indiatimes.com/et-commentary/it-makes-sense-to-follow-the-rules-of-investing/" 
+
+[[7]]
+                                                                                                                                        class 
+                                                                                                                       "twitter-share-button" 
+                                                                                                                                         href 
+                                                                                                                  "https://twitter.com/share" 
+                                                                                                                                    data-text 
+                                                                           "It makes sense to follow the rules of investing: Dhirendra Kumar" 
+                                                                                                                                     data-url 
+"http://economictimes.indiatimes.comhttp://blogs.economictimes.indiatimes.com/et-commentary/it-makes-sense-to-follow-the-rules-of-investing/" 
+
+[[8]]
+                                                                 pg 
+                                                         "mfNwsMor" 
+                                                               href 
+"/personal-finance/mutual-funds/mf-news/articlelist/1107225967.cms" 
+
+[[9]]
+                                                                 pg 
+                                                       "mfAnlysMor" 
+                                                               href 
+"/personal-finance/mutual-funds/analysis/articlelist/314856258.cms" 
+
+[[10]]
+                                                                                                                                                                                                                                                                                                                                    onclick 
+"findrank('fyf',document.getElementById('fundtype'),document.getElementById('category'),document.getElementById('subcategory').childNodes[0],document.getElementById('returnperiod'),document.getElementById('fundfamily'),document.getElementById('return'),document.getElementById('returntext'),document.getElementById('returntext2'))" 
+                                                                                                                                                                                                                                                                                                                                       href 
+                                                                                                                                                                                                                                                                                                                       "javascript:void();" 
+                                                                                                                                                                                                                                                                                                                                         pg 
+                                                                                                                                                                                                                                                                                                                                "mfToolBT1" 
+
+[[11]]
+                                                                                                                                                                                                                                                          onclick 
+"findrank('fr',document.getElementById('fundtype2'),document.getElementById('category2'),document.getElementById('subcategory2').childNodes[0],document.getElementById('fundfamily2'),document.getElementById('return'),document.getElementById('return'),'','')" 
+                                                                                                                                                                                                                                                             href 
+                                                                                                                                                                                                                                             "javascript:void();" 
+                                                                                                                                                                                                                                                               pg 
+                                                                                                                                                                                                                                                      "mfToolBT2" 
+
+[[12]]
+          pg         href 
+"fsearchAMC"    "#sbyamc" 
+
+[[13]]
+                                                                                                pg 
+                                                                                       "mfBycatL1" 
+                                                                                              href 
+"/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year" 
+
+[[14]]
+                                                                                                                    pg 
+                                                                                                           "mfBycatL2" 
+                                                                                                                  href 
+"/equity-large-%26-mid-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20%26%20mid%20cap&period=r1year" 
+
+[[15]]
+                                                                                                                    pg 
+                                                                                                           "mfBycatL3" 
+                                                                                                                  href 
+"/equity-mid-%26-small-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=mid%20%26%20small%20cap&period=r1year" 
+
+[[16]]
+                                                                                                                 pg 
+                                                                                                        "mfBycatL4" 
+                                                                                                               href 
+"/equity-multi-cap/equity-multi-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=multi%20cap&period=r1year" 
+
+[[17]]
+                                                                                                      pg 
+                                                                                             "mfBycatL5" 
+                                                                                                    href 
+"/equity-tax-planning/mffundsbycategory.cms?primaryobj=equity&secondaryobj=tax%20planning&period=r1year" 
+
+[[18]]
+                                                                                                        pg 
+                                                                                               "mfBycatL6" 
+                                                                                                      href 
+"/equity-infrastructure/mffundsbycategory.cms?primaryobj=equity&secondaryobj=infrastructure&period=r1year" 
+
+[[19]]
+                                                                                    pg 
+                                                                           "mfBycatL7" 
+                                                                                  href 
+"/debt-income/mffundsbycategory.cms?primaryobj=debt&secondaryobj=income&period=r1year" 
+
+[[20]]
+                                                                                              pg 
+                                                                                     "mfBycatL8" 
+                                                                                            href 
+"/debt-short-term/mffundsbycategory.cms?primaryobj=debt&secondaryobj=short%20term&period=r1year" 
+
+[[21]]
+                                                                                                          pg 
+                                                                                                 "mfBycatL9" 
+                                                                                                        href 
+"/debt-gilt-short-term/mffundsbycategory.cms?primaryobj=debt&secondaryobj=gilt%20short%20term&period=r1year" 
+
+[[22]]
+                                                                                                                             pg 
+                                                                                                                   "mfBycatL10" 
+                                                                                                                           href 
+"/debt-gilt-medium-%26-long/mffundsbycategory.cms?primaryobj=debt&secondaryobj=gilt%20medium%20%26%20long%20term&period=r1year" 
+
+[[23]]
+                                                                                    pg 
+                                                                          "mfBycatL11" 
+                                                                                  href 
+"/debt-liquid/mffundsbycategory.cms?primaryobj=debt&secondaryobj=liquid&period=r1year" 
+
+[[24]]
+                                                                                                            pg 
+                                                                                                  "mfBycatL12" 
+                                                                                                          href 
+"/debt-ultra-short-term/mffundsbycategory.cms?primaryobj=debt&secondaryobj=ultra%20short%20term&period=r1year" 
+
+[[25]]
+                                                                                    pg 
+                                                                            "MmsLink9" 
+                                                                                  href 
+"/equity-fmcg/mffundsbycategory.cms?primaryobj=equity&secondaryobj=fmcg&period=r1year" 
+
+[[26]]
+                                                                                                      pg 
+                                                                                             "MmsLink10" 
+                                                                                                    href 
+"/equity-international/mffundsbycategory.cms?primaryobj=equity&secondaryobj=international&period=r1year" 
+
+[[27]]
+                                                                                          pg 
+                                                                                 "MmsLink11" 
+                                                                                        href 
+"/equity-banking/mffundsbycategory.cms?primaryobj=equity&secondaryobj=banking&period=r1year" 
+
+[[28]]
+                                                                                        pg 
+                                                                               "MmsLink12" 
+                                                                                      href 
+"/equity-others/mffundsbycategory.cms?primaryobj=equity&secondaryobj=others&period=r1year" 
+
+[[29]]
+                                                                                      href 
+"/equity-pharma/mffundsbycategory.cms?primaryobj=equity&secondaryobj=pharma&period=r1year" 
+
+[[30]]
+                                                                                                pg 
+                                                                                       "MmsLink13" 
+                                                                                              href 
+"/equity-technology/mffundsbycategory.cms?primaryobj=equity&secondaryobj=technology&period=r1year" 
+
+[[31]]
+                                                                              pg 
+                                                                     "MmsLink13" 
+                                                                            href 
+"/debt-fmp/mffundsbycategory.cms?primaryobj=debt&secondaryobj=fmp&period=r1year" 
+
+[[32]]
+                                                                                    pg 
+                                                                           "MmsLink13" 
+                                                                                  href 
+"/debt-others/mffundsbycategory.cms?primaryobj=debt&secondaryobj=others&period=r1year" 
+
+[[33]]
+                                                                                             href 
+"/commodities-gold/mffundsbycategory.cms?primaryobj=commodities&secondaryobj=funds&period=r1year" 
+
+[[34]]
+                                                                                            href 
+"/hybrid-arbitrage/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=arbitrage&period=r1year" 
+
+[[35]]
+                                                                                                            href 
+"/hybrid-asset-allocation/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=asset%20allocation&period=r1year" 
+
+[[36]]
+                                                                                                                            href 
+"/hybrid-debt-oriented-aggressive/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=debt-oriented%20aggressive&period=r1year" 
+
+[[37]]
+                                                                                                                                href 
+"/hybrid-debt-oriented-conservative/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=debt-oriented%20conservative&period=r1year" 
+
+[[38]]
+                                                                                                        href 
+"/hybrid-equity-oriented/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=equity-oriented&period=r1year" 
+
+[[39]]
+                                                                                      href 
+"/hybrid-others/mffundsbycategory.cms?primaryobj=hybrid&secondaryobj=others&period=r1year" 
+
+[[40]]
+                               href 
+"/personal-finance/etf/etfhome.cms" 
+
