@@ -1,0 +1,155 @@
+---
+title: "MutualFunds-analysis"
+author: "Sachin Sancheti"
+date: "Friday, March 06, 2015"
+output:
+html_document:
+keep_md: yes
+theme: flatly
+runtime: shiny
+---
+
+The document is an interactive document to help gain better insight of the scraped data from the <http://economictimes.indiatimes.com/mutual-funds>.
+
+## Methodology
+* We analyse all the funds that have performed the best over a period of time and determine the sector allocation that have performed well over that period.
+* After learning on the trend, we shall decide on which sectors should be looked at favourably for investing into
+* Once decided, we look at the top mutual funds with the best allocation, rank their position in terms of returns and risk to make a decision
+
+```{r packageloading,echo=FALSE,cache=FALSE,results='hide'}
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(RCurl))
+suppressPackageStartupMessages(library(reshape2))
+suppressPackageStartupMessages(library(gdata))
+suppressPackageStartupMessages(library(Hmisc))
+library(tidyr)
+library(stringr)
+library(shiny)
+suppressPackageStartupMessages(library(ggplot2))
+load("alldata.RData") #dataset saved in local file after scraping
+alldata[[793]]<-NULL
+```
+
+```{r integrity,echo=FALSE,results='asis',eval=FALSE}
+dataintegritycheck = as.data.frame(matrix(NA,ncol=20))
+for(i in 1:4234){
+  dataintegritycheck = rbind(dataintegritycheck,as.data.frame(t(c(alldata[i][[1]]$smry %>% dim, alldata[i][[1]]$smry %>% dim,alldata[i][[1]]$sector %>% dim,alldata[i][[1]]$sector %>% dim,alldata[i][[1]]$fundbasics %>% dim,alldata[i][[1]]$fundbasics %>% dim,alldata[i][[1]]$manager %>%length,alldata[i][[1]]$returnsinformation %>% dim,alldata[i][[1]]$returnsinformation %>% dim,alldata[i][[1]]$url,alldata[i][[1]]$fundname,alldata[i][[1]]$i)                                                     )))
+  }
+dataintegritycheck <- dataintegritycheck[-1,]
+# write.csv(dataintegritycheck,"dataintegritycheck.csv",quote = F)
+if(apply(dataintegritycheck[,1:17],2,function(x) length(unique(x))) %>% sum ==17){
+  cat("Data integrity test PASSED")
+  }else{
+    cat("Data integrity test FAILED")
+    }
+```
+
+```{r returnsector,echo=FALSE,cache=FALSE,include=TRUE,eval=TRUE,results='hide'}
+# Find funds with the highest returns
+returnstable <- data.frame()
+summarytable <- data.frame()
+sectortable <- data.frame()
+system.time(for(i in 1:4234){#length(alldata)
+  returnstable <- rbind(returnstable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$returnsinformation))
+  summarytable <- rbind(summarytable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$smry[c(2,4,5,7),]))
+  sectortable <- rbind(sectortable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$sector))
+  })
+returnstable <- tbl_df(returnstable)
+sectortable <- tbl_df(sectortable)
+returnsectortable <- full_join(returnstable,sectortable) %>%
+  mutate(Sector = ifelse(All.pc=="NA","NA",Sector))
+returnsectortable[,c(4:10,12,13)] <- apply(returnsectortable[,c(4:10,12,13)],2,function(x) extract_numeric(x))
+returnsectortable[,2]=as.data.frame(lapply(returnsectortable[,2],as.character),stringsAsFactors=FALSE)
+apply(returnsectortable,2,class)
+write.csv(returnsectortable,"returnsectortable1.csv")
+```
+
+```{r table_to_show,echo=FALSE}
+inputPanel(
+  selectInput("Time", label = "Sort by returns time",
+              choices = (names(returnstable[4:10])), selected = "T30"),
+  selectInput("Value", label = "What value of allocation would you like to see",
+              choices = (names(sectortable[4:5])), selected = "All.pc")
+  )
+
+renderDataTable({
+  equat <- paste("i+fundname+",input$Time,"~Sector")
+  casted.returnsectortable <- dcast(returnsectortable,equat,fun.aggregate = function(x) sum(x,na.rm=TRUE),
+                                    value.var = input$Value) %>%
+    tbl_df
+  names(casted.returnsectortable) <- make.names(names(casted.returnsectortable))
+  
+  sortingcols <- returnsectortable %>% tbl_df %>% rowwise() %>% mutate(Sector1 = make.names(Sector)) %>% group_by(Sector1) %>% summarise(value.invested = sum(All.value,na.rm = TRUE)) %>%
+  ungroup %>%
+    arrange(desc(value.invested)) %>%
+    select(Sector1) %>% 
+    as.data.frame %>% 
+    as.vector
+#  sortingcols <- apply(casted.returnsectortable[,4:(dim(casted.returnsectortable)[2]-1)],2,function(x) sum(x,na.rm = TRUE))
+  finalcols <- sortingcols#data.frame(sortingcols,rows = sortingcols %>% as.data.frame %>%rownames) %>% tbl_df %>%
+    #arrange(desc(sortingcols)) %>% select(rows) %>%
+    #as.vector
+  casted.returnsectortable %>% tbl_df() %>%
+    mutate_(SortingCrit = input$Time) %>% 
+    arrange(desc(SortingCrit)) %>%
+    select_(~i,~fundname,~SortingCrit,.dots = lapply(finalcols$Sector1,as.symbol))
+  }
+)
+
+renderDataTable({
+  returnsectortable %>% tbl_df %>%
+    group_by(Sector) %>% summarise(funds.invested=n_distinct(fundname),value.invested = sum(All.value,na.rm = TRUE)) %>%
+    ungroup %>%
+    arrange(desc(value.invested))
+  },options = list(pageLength = -1))
+
+one.word <- function(word)({
+  strsplit(as.character(word),split= " ")[[1]][1]
+  })
+
+
+renderDataTable({
+  returnsectortable %>% tbl_df %>%
+    rowwise() %>%
+    mutate(Company = first.word(fundname)) %>%
+    group_by(Company) %>%
+    summarise(Total = sum(All.value,na.rm = TRUE),
+              Number.of.funds = n_distinct(fundname),
+              A.T7 = sum(T7,na.rm = TRUE)/sum(!is.na(T7)),
+              CV.T7 = mean(T7,na.rm = TRUE)/sd(T7,na.rm = TRUE),
+              A.T30 = sum(T30,na.rm = TRUE)/sum(!is.na(T30)),
+              CV.T30 = mean(T30,na.rm = TRUE)/sd(T30,na.rm = TRUE),
+              A.T90 = sum(T90,na.rm = TRUE)/sum(!is.na(T90)),
+              CV.T90 = mean(T90,na.rm = TRUE)/sd(T90,na.rm = TRUE),
+              A.T180 = sum(T180,na.rm = TRUE)/sum(!is.na(T180)),
+              CV.T180 = mean(T180,na.rm = TRUE)/sd(T180,na.rm = TRUE),
+              A.T360 = sum(T360,na.rm = TRUE)/sum(!is.na(T360)),
+              CV.T360 = mean(T360,na.rm = TRUE)/sd(T360,na.rm = TRUE),
+              A.T1080 = sum(T1080,na.rm = TRUE)/sum(!is.na(T1080)),
+              CV.T1080 = mean(T1080,na.rm = TRUE)/sd(T1080,na.rm = TRUE),
+              A.T7200 = sum(T7200,na.rm = TRUE)/sum(!is.na(T7200)),
+              CV.T7200 = mean(T7200,na.rm = TRUE)/sd(T7200,na.rm = TRUE) %>%
+                round(2)
+              )
+  },options = list(pageLength = -1),
+callback = "function(table) {
+    table.on('click.dt', 'tr', function() {
+    $(this).toggleClass('selected');
+    Shiny.onInputChange('rows',
+    table.rows('.selected').indexes().toArray());
+    });
+}"
+)
+
+renderPlot({
+  tt <- returnsectortable %>% tbl_df %>%
+    rowwise() %>%
+    mutate(Company = first.word(fundname)) %>%
+    mutate_(SortingCrit = input$Time) %>%
+    group_by(Company,fundname) %>%
+    summarise(returns = mean(SortingCrit,na.rm = TRUE))
+  rttr <- qplot(x = Company,y = returns,data = tt,geom = c("boxplot"))+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+geom_text(data = aggregate(fundname~Company,tt,length),aes(label=fundname,y = -12,size = .1))+geom_text(data = aggregate(returns~Company,tt,sd),aes(label=round(returns,1),y = -6,size = .1))
+})
+
+```
+

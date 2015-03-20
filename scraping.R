@@ -4,6 +4,7 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(gdata)
+library(reshape2)
 #
 #"http://economictimes.indiatimes.com/lt-equity-fund--direct-plan/mffactsheet/schemeid-16212.cms"
 #allfunds = "http://economictimes.indiatimes.com/equity-large-cap/mffundsbycategory.cms?primaryobj=equity&secondaryobj=large%20cap&period=r1year"
@@ -35,43 +36,55 @@ unilint$newlink = paste("http://economictimes.indiatimes.com",unilint$hyperlink,
 
 alldata <- list()
 
-#this could take upto 4 sec per page
+# this could take upto 4 sec per page
+# 5 hours for 3235 records
+sink("logs.txt")
 system.time({
-  for(i in 1:1000){
+  for(i in 1:4235){
     fname <- as.character(unilint$fundname[i])
-    cat("Working on:",as.character(fname),"\n")
     lnk <- as.character(unilint$newlink[i])
-    ps <- tryCatch(parseIt(lnk),
-                   error = function(e) NULL)
-    alldetails <- tryCatch(
-      list(smry = summarydata(ps),
-           sector = sectorinfo(ps),
-           fundbasics = fundinfo(ps),
-           manager = fundmgrinfo(ps),
-           #risk = try(riskinfo(ps)),
-           url = lnk,
-           fundname = fname,
-           i = i,
-           problems = is.null(ps)),
-      error = function(e) cat("Error in",i,"\n"))
-    cat("Done with:",i,"\n\n")
-    alldata <- c(alldata,fund = list(alldetails))
+    alldetails <- fundextract(fname,lnk,i)
+    alldata[i]<-list(alldetails)
+    #alldata <- c(alldata,fund = list(alldetails))
+  }
+})
+sink()
+# fix those entries which did have problem
+system.time({
+  for(i in 1:4235){
+    if (is.null(alldata[i][[1]]$problem)==TRUE){
+      alldetails <- fundextract(fname,lnk,i)
+      alldata[i]<-list(alldetails)
+    }
   }
 })
 
-save(alldata,file = "first1000.RData")
-url = "http://economictimes.indiatimes.com/uti-equity-fund/mffactsheet/schemeid-247.cms"
-
-ps = parseIt(url)
-list(smry = summarydata(ps),
-     sector = sectorinfo(ps),
-     fundbasics = fundinfo(ps),
-     manager = fundmgrinfo(ps),
-     risk = riskinfo(ps))
+save(alldata,file = "alldata.RData")
 
 # Function to parse the url from the html
 parseIt <- function(x){
   htmlTreeParse(x, useInternalNodes = TRUE)
+}
+
+# Extraction of funds
+fundextract <- function(fundname,newlink,i){
+  cat("Working on:",as.character(fundname),"\n")
+  ps <- tryCatch(parseIt(newlink),
+                 error = function(e) NULL)
+  alldetails <- tryCatch(
+    list(smry = summarydata(ps),
+         sector = sectorinfo(ps),
+         fundbasics = fundinfo(ps),
+         manager = fundmgrinfo(ps),
+         #risk = try(riskinfo(ps)),
+         returnsinformation = returnsinfo(ps),
+         url = newlink,
+         fundname = fundname,
+         i = i,
+         problems = is.null(ps)),
+    error = function(e) cat("Error in",i,"\n"))
+  cat("Done with:",i,"\n\n")
+  return(alldetails)
 }
 
 # Function to get all the hyperlinks in the list of funds page for further data parsing
@@ -225,11 +238,11 @@ returnsinfo <- function(x, y = "Fund Return"){
         value = rbind(value,jt)
       }
   })
-  value
+  #value
   returntab = tbl_df(as.data.frame(value))
   names(returntab) <- c("Return","T7","T30","T90","T180","T360","T1080","T7200")
   returntab[] = lapply(returntab,as.character)
-  returntab
+  return(returntab)
 }
 
 fundmgrinfo <- function(x){
