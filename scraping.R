@@ -31,6 +31,7 @@ system.time({
   }
 })
 
+unilint <- unique(lint)
 unilint <- convert.magic(unilint,"character")
 unilint$newlink = paste("http://economictimes.indiatimes.com",unilint$hyperlink,sep = "")
 
@@ -38,9 +39,9 @@ alldata <- list()
 
 # this could take upto 4 sec per page
 # 5 hours for 3235 records
-sink("logs.txt")
+sink("mainextraction-logs.txt")
 system.time({
-  for(i in 1:4235){
+  for(i in 1:dim(unilint)[1]){
     fname <- as.character(unilint$fundname[i])
     lnk <- as.character(unilint$newlink[i])
     alldetails <- fundextract(fname,lnk,i)
@@ -51,7 +52,7 @@ system.time({
 sink()
 # fix those entries which did have problem
 system.time({
-  for(i in 1:4235){
+  for(i in 1:dim(unilint)[1]){
     if (is.null(alldata[i][[1]]$problem)==TRUE){
       alldetails <- fundextract(fname,lnk,i)
       alldata[i]<-list(alldetails)
@@ -59,7 +60,7 @@ system.time({
   }
 })
 
-save(alldata,file = "alldata.RData")
+save(alldata,file = "alldata2015-04-05.RData")
 
 # Function to parse the url from the html
 parseIt <- function(x){

@@ -5,16 +5,15 @@ date: "Friday, March 06, 2015"
 output:
 html_document:
 keep_md: yes
-theme: flatly
+theme: spacelab
 runtime: shiny
 ---
 
 The document is an interactive document to help gain better insight of the scraped data from the <http://economictimes.indiatimes.com/mutual-funds>.
 
 ## Methodology
-* We analyse all the funds that have performed the best over a period of time and determine the sector allocation that have performed well over that period.
-* After learning on the trend, we shall decide on which sectors should be looked at favourably for investing into
-* Once decided, we look at the top mutual funds with the best allocation, rank their position in terms of returns and risk to make a decision
+* The user begins with a table with all the funds available in the Indian market and their allocation of resources. The table is sorted by the highest returns of a specific time period (eg. **T30, T60, T180**) days. The user has further options to remove the **Categories**, **Class of funds**, **Fund Family - Based of Company** and **Type of Fund** if he so wishes to.
+* This will return the top funds and their allocation in the various industries by either **Percentage of allocation** or **Value in crores invested**.
 
 ```{r packageloading,echo=FALSE,cache=FALSE,results='hide'}
 suppressPackageStartupMessages(library(dplyr))
@@ -26,17 +25,17 @@ library(tidyr)
 library(stringr)
 library(shiny)
 suppressPackageStartupMessages(library(ggplot2))
-load("alldata.RData") #dataset saved in local file after scraping
-alldata[[793]]<-NULL
+load("alldata2015-04-06.RData") #dataset saved in local file after scraping
+#alldata[[793]]<-NULL
 ```
 
 ```{r integrity,echo=FALSE,results='asis',eval=FALSE}
 dataintegritycheck = as.data.frame(matrix(NA,ncol=20))
-for(i in 1:4234){
+for(i in 1:length(alldata)){
   dataintegritycheck = rbind(dataintegritycheck,as.data.frame(t(c(alldata[i][[1]]$smry %>% dim, alldata[i][[1]]$smry %>% dim,alldata[i][[1]]$sector %>% dim,alldata[i][[1]]$sector %>% dim,alldata[i][[1]]$fundbasics %>% dim,alldata[i][[1]]$fundbasics %>% dim,alldata[i][[1]]$manager %>%length,alldata[i][[1]]$returnsinformation %>% dim,alldata[i][[1]]$returnsinformation %>% dim,alldata[i][[1]]$url,alldata[i][[1]]$fundname,alldata[i][[1]]$i)                                                     )))
   }
 dataintegritycheck <- dataintegritycheck[-1,]
-# write.csv(dataintegritycheck,"dataintegritycheck.csv",quote = F)
+write.csv(dataintegritycheck,"dataintegritycheck.csv",quote = F)
 if(apply(dataintegritycheck[,1:17],2,function(x) length(unique(x))) %>% sum ==17){
   cat("Data integrity test PASSED")
   }else{
@@ -49,8 +48,10 @@ if(apply(dataintegritycheck[,1:17],2,function(x) length(unique(x))) %>% sum ==17
 returnstable <- data.frame()
 summarytable <- data.frame()
 sectortable <- data.frame()
-system.time(for(i in 1:4234){#length(alldata)
+fundinfotable <- data.frame()
+system.time(for(i in 1:length(alldata)){#length(alldata)
   returnstable <- rbind(returnstable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$returnsinformation))
+  fundinfotable <- rbind(fundinfotable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$fundbasics))
   summarytable <- rbind(summarytable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$smry[c(2,4,5,7),]))
   sectortable <- rbind(sectortable,cbind(i = alldata[i][[1]]$i,fundname = alldata[i][[1]]$fundname,alldata[i][[1]]$sector))
   })
@@ -62,6 +63,9 @@ returnsectortable[,c(4:10,12,13)] <- apply(returnsectortable[,c(4:10,12,13)],2,f
 returnsectortable[,2]=as.data.frame(lapply(returnsectortable[,2],as.character),stringsAsFactors=FALSE)
 apply(returnsectortable,2,class)
 write.csv(returnsectortable,"returnsectortable1.csv")
+
+casted.fundinfotable = dcast(data = fundinfotable,i+fundname~Fund_Info) %>% tbl_df
+names(casted.fundinfotable) <- make.names(names(casted.fundinfotable))
 ```
 
 ```{r table_to_show,echo=FALSE}
@@ -69,7 +73,12 @@ inputPanel(
   selectInput("Time", label = "Sort by returns time",
               choices = (names(returnstable[4:10])), selected = "T30"),
   selectInput("Value", label = "What value of allocation would you like to see",
-              choices = (names(sectortable[4:5])), selected = "All.pc")
+              choices = (names(sectortable[4:5])), selected = "All.pc"),
+  checkboxGroupInput('Benchmark',label = "Benchmarks",choices = unique(casted.fundinfotable$Benchmark),selected=unique(casted.fundinfotable$Benchmark)),
+  checkboxGroupInput('Category',label = "Category",choices =unique(casted.fundinfotable$Category),selected=unique(casted.fundinfotable$Category)),
+  checkboxGroupInput('Class',label = "Class",choices = unique(casted.fundinfotable$Class),selected=unique(casted.fundinfotable$Class)),
+  checkboxGroupInput('family',label = "Fund.Family",choices = unique(casted.fundinfotable$Fund.Family),selected=unique(casted.fundinfotable$Fund.Family)),
+  checkboxGroupInput('Type',label = "Type",choices = unique(casted.fundinfotable$Type),selected=unique(casted.fundinfotable$Type))
   )
 
 renderDataTable({
@@ -92,8 +101,10 @@ renderDataTable({
   casted.returnsectortable %>% tbl_df() %>%
     mutate_(SortingCrit = input$Time) %>% 
     arrange(desc(SortingCrit)) %>%
-    select_(~i,~fundname,~SortingCrit,.dots = lapply(finalcols$Sector1,as.symbol))
-  }
+    select_(~i,~fundname,~SortingCrit,.dots = lapply(finalcols$Sector1,as.symbol)) %>% left_join(casted.fundinfotable) %>%
+  filter(Benchmark %in% input$Benchmark,
+         Category %in% input$Category, Class%in% input$Class,Fund.Family %in% input$family,Type %in% input$Type)
+  } 
 )
 
 renderDataTable({
@@ -140,7 +151,16 @@ callback = "function(table) {
     });
 }"
 )
+```
 
+* To decide the company to shortlist, you can look at the returns provided by the various fund companies in the boxplot graph. The box has 2 parts to it, 
+* **box** which form part explaining that 75% of the fund's returns of the company lie within that area.
+* **Whiskers** form the tail explaining that the rest of the fund's returns deviate to that extent.
+* **Outliers** are denoted by dots and can mean the specific fund has outperformed or underperformed.
+* The chart also has the average rate of written below the chart and the number of funds held by the company
+
+
+```{r plot,echo=FALSE}
 renderPlot({
   tt <- returnsectortable %>% tbl_df %>%
     rowwise() %>%
@@ -149,6 +169,7 @@ renderPlot({
     group_by(Company,fundname) %>%
     summarise(returns = mean(SortingCrit,na.rm = TRUE))
   rttr <- qplot(x = Company,y = returns,data = tt,geom = c("boxplot"))+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+geom_text(data = aggregate(fundname~Company,tt,length),aes(label=fundname,y = -12,size = .1))+geom_text(data = aggregate(returns~Company,tt,sd),aes(label=round(returns,1),y = -6,size = .1))
+  rttr
 })
 
 ```
