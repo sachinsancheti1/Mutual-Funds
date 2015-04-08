@@ -60,7 +60,7 @@ system.time({
   }
 })
 
-save(alldata,file = "alldata2015-04-05.RData")
+save(alldata,file = "alldata2015-04-06.RData")
 
 # Function to parse the url from the html
 parseIt <- function(x){
@@ -192,7 +192,7 @@ convert.magic <- function(obj, type){
 }
 
 fundinfo <- function(x){
-  t = xpathApply(ps,'//div/div/span',fun = xmlChildren)
+  t = xpathApply(x,'//div/div/span',fun = xmlChildren)
   vars = c("Fund Family: ")
   jt = character()
   tr = character()
